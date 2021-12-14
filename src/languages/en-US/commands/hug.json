@@ -1,6 +1,6 @@
 {
   "success": {
     "title": "{{author}} Hugged {{user}}",
-    "footer": "Powered By TextAPI "
+    "footer": "Powered By LiesAPI "
   }
 }

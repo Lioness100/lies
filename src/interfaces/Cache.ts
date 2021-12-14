@@ -1,7 +1,7 @@
-import type { Redis } from "ioredis";
+import type { Redis } from 'ioredis'
 
-declare module "@sapphire/pieces" {
+declare module '@sapphire/pieces' {
   interface Container {
-    cache: Redis;
+    cache: Redis
   }
 }

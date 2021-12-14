@@ -1,5 +1,5 @@
-import { Precondition } from "@sapphire/framework";
-import type { Message } from "discord.js";
+import { Precondition } from '@sapphire/framework'
+import type { Message } from 'discord.js'
 
 export default class Blacklisted extends Precondition {
   public async messageRun(message: Message) {
@@ -7,20 +7,20 @@ export default class Blacklisted extends Precondition {
       where: {
         userId: message.author.id,
       },
-    });
+    })
 
     if (res) {
       return this.error({
         message:
           "You Can't Use This Command, Or Any Commands For That Fact, You're Blacklisted BOZO",
-      });
+      })
     }
-    return this.ok();
+    return this.ok()
   }
 }
 
-declare module "@sapphire/framework" {
+declare module '@sapphire/framework' {
   interface Preconditions {
-    Blacklisted: never;
+    Blacklisted: never
   }
 }

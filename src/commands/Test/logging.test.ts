@@ -1,12 +1,12 @@
-import { ApplyOptions } from "@sapphire/decorators";
-import { Command, CommandOptions } from "@sapphire/framework";
-import { send } from "@sapphire/plugin-editable-commands";
-import type { Message } from "discord.js";
-import { MessageEmbed } from "discord.js";
+import { ApplyOptions } from '@sapphire/decorators'
+import { Command, CommandOptions } from '@sapphire/framework'
+import { send } from '@sapphire/plugin-editable-commands'
+import type { Message } from 'discord.js'
+import { MessageEmbed } from 'discord.js'
 
 @ApplyOptions<CommandOptions>({
-  name: "ltest",
-  description: "This Will Get The Latency Of The Bot",
+  name: 'ltest',
+  description: 'This Will Get The Latency Of The Bot',
 })
 export class UserCommand extends Command {
   public async messageRun(msg: Message) {
@@ -20,8 +20,8 @@ export class UserCommand extends Command {
         `<:blankspace:888643560084221962> <:text_right_two:913360508973891584>  \`${msg.content}\``
       )
       .setFooter(`Message ID: ${msg.id} || Channel ID: ${msg.channel.id}`)
-      .setTimestamp();
+      .setTimestamp()
 
-    return send(msg, { embeds: [embed] });
+    return send(msg, { embeds: [embed] })
   }
 }

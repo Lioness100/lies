@@ -5,7 +5,8 @@ import { Message, MessageEmbed } from "discord.js";
 
 @ApplyOptions<CommandOptions>({
   name: "avatar",
-  description: "This Will Get The Latency Of The Bot",
+  description:
+    "This will fetch data from discord, providing you the avatar of the member, or yourself :)",
   aliases: ["av"],
 })
 export class UserCommand extends Command {
@@ -13,7 +14,7 @@ export class UserCommand extends Command {
     const member = await args.pick("member").catch(() => undefined);
 
     if (!member) {
-      let member = message.author;
+      const member = message.author;
 
       const embed = new MessageEmbed()
         .setTitle(`${member.username}'s Avatar`)

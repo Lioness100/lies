@@ -1,7 +1,7 @@
-import type { PrismaClient } from "@prisma/client";
+import type { PrismaClient } from '@prisma/client'
 
-declare module "@sapphire/pieces" {
+declare module '@sapphire/pieces' {
   interface Container {
-    db: PrismaClient;
+    db: PrismaClient
   }
 }

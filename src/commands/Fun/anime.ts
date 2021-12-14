@@ -9,7 +9,7 @@ import { userMention } from "@discordjs/builders";
 
 @ApplyOptions<CommandOptions>({
   name: "anime",
-  description: "This Will Get The Latency Of The Bot",
+  description: "This will fetch anime data from the Anilist API",
   preconditions: ["Blacklisted"],
 })
 export class UserCommand extends Command {

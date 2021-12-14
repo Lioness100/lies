@@ -1,7 +1,7 @@
-import type { ClientSession } from "mongoose";
+import type { ClientSession } from 'mongoose'
 
-declare module "@sapphire/pieces" {
+declare module '@sapphire/pieces' {
   interface Container {
-    mongoose: ClientSession;
+    mongoose: ClientSession
   }
 }

@@ -6,7 +6,8 @@ import { MessageEmbed } from "discord.js";
 
 @ApplyOptions<CommandOptions>({
   name: "afk",
-  description: "This Will Get The Latency Of The Bot",
+  description:
+    "This will set your status on afk, and upon members pinging you, they will be notified of your afk~ness",
   preconditions: ["Blacklisted"],
 })
 export class UserCommand extends Command {

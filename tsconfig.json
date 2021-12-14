@@ -16,6 +16,6 @@
     "resolveJsonModule": true,
     "composite": true
   },
-  "include": ["src", "src/languages/**/*.json", "src/*", "src/preconditions"],
+  "include": ["src", "src/languages/**/*.json", "src/*", "src/preconditions", "tsconfig.eslint.json"],
   "exclude": ["node_modules"]
 }

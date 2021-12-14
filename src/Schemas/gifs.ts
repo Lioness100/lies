@@ -1,14 +1,14 @@
-import { getModelForClass, prop } from "@typegoose/typegoose";
+import { getModelForClass, prop } from '@typegoose/typegoose'
 
 class Gifs {
   @prop()
-  number!: string;
+  number!: string
 
   @prop({ required: true })
-  type!: string;
+  type!: string
 
   @prop({ required: true })
-  url!: string;
+  url!: string
 }
 
-export const GifsModel = getModelForClass(Gifs);
+export const GifsModel = getModelForClass(Gifs)

@@ -1,7 +1,7 @@
-import { send } from "@sapphire/plugin-editable-commands";
-import { Message, MessageEmbed } from "discord.js";
-import { RandomLoadingMessage } from "./../../constants/index";
-import type { GuildMessage } from "./../../types/Discord/";
+import { send } from '@sapphire/plugin-editable-commands'
+import { Message, MessageEmbed } from 'discord.js'
+import { RandomLoadingMessage } from './../../constants/index'
+import type { GuildMessage } from './../../types/Discord/'
 
 /**
  * Picks a random item from an array
@@ -10,8 +10,8 @@ import type { GuildMessage } from "./../../types/Discord/";
  * const randomEntry = pickRandom([1, 2, 3, 4]) // 1
  */
 export function pickRandom<T>(array: readonly T[]): T {
-  const { length } = array;
-  return array[Math.floor(Math.random() * length)];
+  const { length } = array
+  return array[Math.floor(Math.random() * length)]
 }
 
 /**
@@ -23,11 +23,11 @@ export function sendLoadingMessage(message: Message): Promise<typeof message> {
     embeds: [
       new MessageEmbed()
         .setDescription(pickRandom(RandomLoadingMessage))
-        .setColor("#FF0000"),
+        .setColor('#FF0000'),
     ],
-  });
+  })
 }
 
 export function isGuildMessage(message: Message): message is GuildMessage {
-  return message.guild !== null;
+  return message.guild !== null
 }

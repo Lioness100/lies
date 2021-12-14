@@ -6,7 +6,8 @@ import { MessageEmbed } from "discord.js";
 
 @ApplyOptions<CommandOptions>({
   name: "snipe",
-  description: "This Will Get The Latency Of The Bot",
+  description:
+    "This will get the most recently deleted message from the cache.",
 })
 export class UserCommand extends Command {
   public async messageRun(message: Message) {
