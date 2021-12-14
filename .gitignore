@@ -3,6 +3,6 @@ node_modules
 .env
 dist
 yarn-error.log
-prisma/*
-src/commands/test/*
-src/routes/*
+prisma/
+src/commands/test/
+src/routes/
