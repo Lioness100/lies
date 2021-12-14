@@ -1,0 +1,21 @@
+{
+  "extends": "@sapphire/ts-config",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "lib": ["DOM"],
+    "rootDir": "src",
+    "outDir": "dist",
+    "tsBuildInfoFile": "dist/.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "#utils/*": ["lib/utils/*"],
+      "#lib/*": ["lib/*"],
+      "#root/*": ["*"],
+      "#scripts/*": ["scripts/*"]
+    },
+    "resolveJsonModule": true,
+    "composite": true
+  },
+  "include": ["src", "src/languages/**/*.json", "src/*", "src/preconditions"],
+  "exclude": ["node_modules"]
+}

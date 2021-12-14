@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Guild {
+    id Int @id @default(autoincrement())
+
+    guildId String @default("0") @unique
+
+    prefix String @default(",")
+
+    lang String @default("en-US")
+}
+
+model Users {
+    id Int @id @default(autoincrement())
+    
+    userId String @default("0") @unique
+
+    Blacklisted Boolean 
+
+    Reason String @default("Has Not Been Blacklisted Yet")
+}
+
+model ApiKeys {
+  id Int @id @default(autoincrement()) @unique
+
+  userId String @default("0") @unique
+
+  key String @default("0") @unique
+
+  Blacklisted Boolean
+
+  ExpiryDate DateTime 
+
+}
+
+model KeyAddons {
+  id Int @id @default(0) @unique
+
+  key String @default("0") @unique
+
+  IPLock Boolean
+  
+  IP String @default("0") @unique
+}
+
+model Pastes {
+  id Int @id @default(autoincrement()) @unique
+
+  pasteId String @default("0") @unique
+
+  pasteText String @default("This Is Some Text.")
+
+  pasteDate DateTime 
+
+  pasteSyntax String
+}
+
+model GIFS {
+  id Int @id @default(autoincrement()) @unique
+
+  gifURL String @unique
+
+  gifType String 
+
+  DateAdded DateTime
+}
